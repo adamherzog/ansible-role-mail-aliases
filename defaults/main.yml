@@ -1,0 +1,5 @@
+---
+mail_aliases: []
+#  - { name: root, alias: sysadmin@somewhere.com }
+mail_aliases_to_remove: []
+#  - { name: olduser }
