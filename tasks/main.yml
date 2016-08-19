@@ -5,7 +5,7 @@
     line: "{{ item.name }}: {{ item.alias }}"
     regexp: "^#?{{ item.name }}:"
     backup: yes
-  with_items: mail_aliases
+  with_items: '{{ mail_aliases }}'
   notify: rebuild mail aliases
 
 - name: remove email aliases
@@ -14,5 +14,5 @@
     regexp: "^#?{{ item.name }}:"
     state: absent
     backup: yes
-  with_items: mail_aliases_to_remove
+  with_items: '{{ mail_aliases_to_remove }}'
   notify: rebuild mail aliases
